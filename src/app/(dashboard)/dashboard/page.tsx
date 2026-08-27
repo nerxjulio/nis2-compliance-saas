@@ -30,9 +30,9 @@ export default async function DashboardPage() {
         .eq("framework", "NIS2")
         .maybeSingle(),
       supabase
-        .from("org_checklist_progress")
+        .from("checklist_templates")
         .select("id", { count: "exact", head: true })
-        .eq("org_id", orgId),
+        .eq("framework", "NIS2"),
       supabase
         .from("org_checklist_progress")
         .select("id", { count: "exact", head: true })
@@ -82,8 +82,11 @@ export default async function DashboardPage() {
             <CardDescription>Avancement checklist</CardDescription>
             <CardTitle className="text-xl">{progressPct}%</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="space-y-3">
             <Progress value={progressPct} />
+            <Link href="/checklist" className="text-sm text-primary hover:underline">
+              Voir la checklist
+            </Link>
           </CardContent>
         </Card>
 
