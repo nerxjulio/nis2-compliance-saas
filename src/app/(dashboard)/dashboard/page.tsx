@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -57,13 +59,15 @@ export default async function DashboardPage() {
             <CardDescription>Statut NIS2</CardDescription>
             <CardTitle className="text-xl">
               {result ? (
-                <Badge variant={result.classification === "hors_champ" ? "secondary" : "default"}>
-                  {result.classification === "hors_champ"
-                    ? "Hors champ"
-                    : result.classification === "essentielle"
-                      ? "Entité essentielle"
-                      : "Entité importante"}
-                </Badge>
+                <Link href="/diagnostic/resultat">
+                  <Badge variant={result.classification === "hors_champ" ? "secondary" : "default"}>
+                    {result.classification === "hors_champ"
+                      ? "Hors champ"
+                      : result.classification === "essentielle"
+                        ? "Entité essentielle"
+                        : "Entité importante"}
+                  </Badge>
+                </Link>
               ) : (
                 <span className="text-sm font-normal text-muted-foreground">
                   Diagnostic non réalisé
@@ -99,6 +103,9 @@ export default async function DashboardPage() {
               10 minutes pour savoir précisément si NIS2 te concerne et à quel niveau.
             </CardDescription>
           </CardHeader>
+          <CardContent>
+            <Button render={<Link href="/diagnostic" />} nativeButton={false}>Faire le diagnostic</Button>
+          </CardContent>
         </Card>
       ) : null}
     </div>

@@ -58,7 +58,7 @@ export default function LandingPage() {
             <Link href="#pricing" className="text-sm text-muted-foreground hover:text-foreground">
               Tarifs
             </Link>
-            <Button size="sm" render={<Link href="/login" />}>
+            <Button size="sm" render={<Link href="/login" />} nativeButton={false}>
               Se connecter
             </Button>
           </nav>
@@ -80,7 +80,7 @@ export default function LandingPage() {
             conformité ni budget cabinet de 10-15k€.
           </p>
           <div className="mt-8 flex justify-center gap-3">
-            <Button size="lg" render={<Link href="/login" />}>
+            <Button size="lg" render={<Link href="/login" />} nativeButton={false}>
               Faire le diagnostic gratuit
             </Button>
           </div>
@@ -119,6 +119,7 @@ export default function LandingPage() {
                   className="w-full"
                   variant={plan.highlighted ? "default" : "outline"}
                   render={<Link href={plan.href} />}
+                  nativeButton={false}
                 >
                   {plan.cta}
                 </Button>
