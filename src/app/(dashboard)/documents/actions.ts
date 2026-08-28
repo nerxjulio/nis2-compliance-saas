@@ -67,7 +67,8 @@ export async function generateDocumentAction(
       classification: nis2Result?.classification ?? null,
       generatedAt,
     });
-  } catch {
+  } catch (err) {
+    console.error("[generateDocumentAction] PDF render failed:", err);
     return { error: "Impossible de générer le PDF. Réessaie dans un instant." };
   }
 
@@ -77,7 +78,8 @@ export async function generateDocumentAction(
     .upload(storagePath, pdfBuffer, { contentType: "application/pdf", upsert: true });
 
   if (uploadError) {
-    return { error: "Impossible d'enregistrer le document. Réessaie dans un instant." };
+    console.error("[generateDocumentAction] upload failed:", uploadError.message);
+    return { error: `Upload échoué : ${uploadError.message}` };
   }
 
   const { error: dbError } = await supabase.from("documents").upsert(
@@ -94,7 +96,8 @@ export async function generateDocumentAction(
   );
 
   if (dbError) {
-    return { error: "Le document a été généré mais pas enregistré. Réessaie dans un instant." };
+    console.error("[generateDocumentAction] db upsert failed:", dbError.message);
+    return { error: `Enregistrement échoué : ${dbError.message}` };
   }
 
   revalidatePath("/documents");
