@@ -12,9 +12,8 @@ function Bullet({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function PlanIncidentsPdf({ org }: { org: OrgContext }) {
+export function PlanIncidentsSection({ org }: { org: OrgContext }) {
   return (
-    <Document title={`Plan de gestion des incidents — ${org.orgName}`}>
       <DocumentShell title="Plan de gestion des incidents" org={org}>
         <View style={pdfStyles.section}>
           <Text style={pdfStyles.sectionTitle}>1. Objectif</Text>
@@ -87,6 +86,13 @@ export function PlanIncidentsPdf({ org }: { org: OrgContext }) {
           </Text>
         </View>
       </DocumentShell>
+  );
+}
+
+export function PlanIncidentsPdf({ org }: { org: OrgContext }) {
+  return (
+    <Document title={`Plan de gestion des incidents — ${org.orgName}`}>
+      <PlanIncidentsSection org={org} />
     </Document>
   );
 }

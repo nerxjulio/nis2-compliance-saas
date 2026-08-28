@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { classifyDiagnostic, type DiagnosticAnswers } from "@/lib/diagnostic/classify";
+import { sendDiagnosticFollowupEmail } from "@/lib/email/diagnosticFollowup";
 
 type ActionResult = { error: string | null };
 
@@ -24,13 +25,14 @@ export async function submitDiagnosticAction(
 
   const { data: membership } = await supabase
     .from("memberships")
-    .select("org_id")
+    .select("org_id, organizations(name)")
     .eq("user_id", user.id)
     .limit(1)
     .maybeSingle();
 
   if (!membership) redirect("/onboarding");
   const orgId = membership.org_id;
+  const orgName = (membership.organizations as unknown as { name: string } | null)?.name ?? "ton organisation";
 
   const sector = String(formData.get("sector") ?? "");
   if (!sector) {
@@ -86,6 +88,17 @@ export async function submitDiagnosticAction(
 
   if (resultsError) {
     return { error: "Impossible de calculer le résultat. Réessaie dans un instant." };
+  }
+
+  if (user.email) {
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+    await sendDiagnosticFollowupEmail({
+      to: user.email,
+      orgName,
+      nis2Classification: nis2.classification,
+      doraConcerned: dora.classification !== "hors_champ",
+      dashboardUrl: `${siteUrl}/dashboard`,
+    });
   }
 
   redirect("/diagnostic/resultat");

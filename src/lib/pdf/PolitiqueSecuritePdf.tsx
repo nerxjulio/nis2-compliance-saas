@@ -12,11 +12,11 @@ function Bullet({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function PolitiqueSecuritePdf({ org }: { org: OrgContext }) {
+// Contenu seul (sans <Document>), pour composition dans le dossier d'audit combiné.
+export function PolitiqueSecuriteSection({ org }: { org: OrgContext }) {
   const classificationLabel = org.classification ? CLASSIFICATION_LABEL[org.classification] : null;
 
   return (
-    <Document title={`Politique de sécurité — ${org.orgName}`}>
       <DocumentShell title="Politique de sécurité de l'information" org={org}>
         <View style={pdfStyles.section}>
           <Text style={pdfStyles.sectionTitle}>1. Objet et périmètre</Text>
@@ -91,6 +91,13 @@ export function PolitiqueSecuritePdf({ org }: { org: OrgContext }) {
           </Text>
         </View>
       </DocumentShell>
+  );
+}
+
+export function PolitiqueSecuritePdf({ org }: { org: OrgContext }) {
+  return (
+    <Document title={`Politique de sécurité — ${org.orgName}`}>
+      <PolitiqueSecuriteSection org={org} />
     </Document>
   );
 }

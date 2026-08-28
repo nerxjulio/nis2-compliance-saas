@@ -113,6 +113,21 @@ export default async function DocumentsPage() {
           );
         })}
       </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-base">Dossier d&apos;audit complet</CardTitle>
+          <CardDescription>
+            Un seul PDF combinant la page de garde, l&apos;état de ta checklist et les 3
+            documents ci-dessus — pratique pour un audit ou un partage externe.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button variant="outline" render={<a href="/api/audit-package" />} nativeButton={false}>
+            Télécharger le dossier d&apos;audit
+          </Button>
+        </CardContent>
+      </Card>
     </div>
   );
 }

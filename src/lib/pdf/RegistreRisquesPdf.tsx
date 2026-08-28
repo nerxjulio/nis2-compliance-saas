@@ -65,9 +65,8 @@ const STARTER_RISKS: Risk[] = [
 
 const COLS = { risque: "34%", proba: "13%", impact: "13%", niveau: "13%", mesures: "27%" } as const;
 
-export function RegistreRisquesPdf({ org }: { org: OrgContext }) {
+export function RegistreRisquesSection({ org }: { org: OrgContext }) {
   return (
-    <Document title={`Registre des risques — ${org.orgName}`}>
       <DocumentShell title="Registre des risques" org={org}>
         <View style={pdfStyles.section}>
           <Text style={pdfStyles.paragraph}>
@@ -96,6 +95,13 @@ export function RegistreRisquesPdf({ org }: { org: OrgContext }) {
           ))}
         </View>
       </DocumentShell>
+  );
+}
+
+export function RegistreRisquesPdf({ org }: { org: OrgContext }) {
+  return (
+    <Document title={`Registre des risques — ${org.orgName}`}>
+      <RegistreRisquesSection org={org} />
     </Document>
   );
 }
