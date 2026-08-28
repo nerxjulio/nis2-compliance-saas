@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "title": "NIS2Ready — NIS2 & DORA compliance for SMEs",
+    "description": "Find out in 10 minutes whether NIS2 or DORA applies to you, then get your prioritized checklist and compliance documents generated automatically."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "diagnostic": "Diagnostic",
+    "checklist": "Checklist",
+    "documents": "Documents",
+    "billing": "Billing",
+    "logout": "Log out",
+    "pricing": "Pricing",
+    "login": "Log in"
+  },
+  "landing": {
+    "badge": "NIS2 · DORA",
+    "heroTitle": "In 10 minutes, find out if NIS2 or DORA applies to you",
+    "heroSubtitle": "Then get your prioritized checklist and compliance documents generated automatically — security policy, risk register, incident response plan. Built for solo CISOs and SME/mid-market leaders with no compliance team and no €10-15k consultancy budget.",
+    "ctaFree": "Take the free diagnostic",
+    "pricingTitle": "Simple pricing, no surprises",
+    "pricingSubtitle": "Start for free, upgrade to a paid plan when you're ready to act.",
+    "mostChosen": "Most popular",
+    "footer": "© {year} NIS2Ready",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "period": "",
+        "description": "Full diagnostic, so you know where you stand.",
+        "features": ["NIS2 & DORA diagnostic", "Instant result", "Follow-up email"],
+        "cta": "Take the diagnostic"
+      },
+      "starter": {
+        "name": "Starter",
+        "price": "$149",
+        "period": "/month",
+        "description": "To kick off your compliance work.",
+        "features": ["1 organization", "Prioritized checklist", "5 key documents generated", "PDF export", "1 user"],
+        "cta": "Get started"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "$299",
+        "period": "/month",
+        "description": "To run compliance as a team.",
+        "features": ["Multiple users", "Unlimited documents", "Full audit package", "Progress history", "Priority support"],
+        "cta": "Get started"
+      }
+    }
+  },
+  "login": {
+    "title": "Log in to NIS2Ready",
+    "description": "Enter your work email — we'll send you a secure sign-in link, no password to remember.",
+    "emailLabel": "Work email",
+    "placeholder": "you@company.com",
+    "submit": "Send me the sign-in link",
+    "sending": "Sending…",
+    "checkEmail": "Check your inbox: a sign-in link was just sent to you.",
+    "invalidEmail": "Invalid email address.",
+    "sendError": "Couldn't send the sign-in link. Try again in a moment."
+  },
+  "onboarding": {
+    "title": "Welcome to NIS2Ready",
+    "description": "A few details about your organization to start the diagnostic.",
+    "orgName": "Organization name",
+    "orgNamePlaceholder": "Acme Inc.",
+    "sector": "Industry",
+    "sectorPlaceholder": "Energy, healthcare, manufacturing…",
+    "size": "Headcount",
+    "sizePlaceholder": "Select a range",
+    "sizeOptions": {
+      "1-49": "1 to 49 employees",
+      "50-249": "50 to 249 employees",
+      "250-999": "250 to 999 employees",
+      "1000+": "1000+ employees"
+    },
+    "submit": "Create my organization",
+    "creating": "Creating…",
+    "nameRequired": "Organization name is required.",
+    "createError": "Couldn't create the organization. Try again in a moment."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Overview of your NIS2 compliance.",
+    "nis2Status": "NIS2 status",
+    "diagnosticNotDone": "Diagnostic not done",
+    "checklistProgress": "Checklist progress",
+    "viewChecklist": "View checklist",
+    "documentsGenerated": "Documents generated",
+    "viewDocuments": "View documents",
+    "startDiagnosticTitle": "Start with the diagnostic",
+    "startDiagnosticDesc": "10 minutes to know precisely whether NIS2 applies to you, and at what level.",
+    "doDiagnostic": "Take the diagnostic",
+    "classification": {
+      "hors_champ": "Out of scope",
+      "essentielle": "Essential entity",
+      "importante": "Important entity"
+    }
+  },
+  "diagnostic": {
+    "title": "NIS2 & DORA diagnostic",
+    "subtitle": "A few questions to know precisely whether you're in scope, and at what level.",
+    "resultButton": "See my result",
+    "calculating": "Calculating…",
+    "sectorSectionTitle": "Your industry",
+    "sectorSectionDesc": "NIS2 applies based on a precise list of sectors (Annexes I and II of the directive).",
+    "sectorPlaceholder": "Select your sector",
+    "annexe1": "Annex I — sectors of high criticality",
+    "annexe2": "Annex II — other critical sectors",
+    "sizeSectionTitle": "Size of your organization",
+    "sizeSectionDesc": "The NIS2 threshold depends on headcount and financial figures — use your most recent figures.",
+    "employees": "Number of employees",
+    "turnover": "Annual turnover (€)",
+    "balanceSheet": "Annual balance sheet total (€)",
+    "euSectionTitle": "Operations in the EU",
+    "euSectionDesc": "NIS2 applies to entities established in the EU or offering services there.",
+    "yes": "Yes",
+    "no": "No",
+    "criteriaSectionTitle": "Special criteria",
+    "criteriaSectionDesc": "Check anything that applies to your organization.",
+    "soleProvider": "You are the sole provider of this service in your country.",
+    "criticalImpact": "A disruption to your activity would significantly impact public safety, security, or health.",
+    "financialEntity": "You are a regulated financial entity (bank, insurance, payments, asset management, crypto-assets…) — relevant for DORA.",
+    "sectorRequired": "Select an industry.",
+    "saveError": "Couldn't save your answers. Try again in a moment.",
+    "computeError": "Couldn't compute the result. Try again in a moment.",
+    "sectors": {
+      "energie": "Energy (electricity, gas, oil, district heating, hydrogen)",
+      "transport": "Transport (air, rail, maritime, road)",
+      "banque": "Banking sector",
+      "marches_financiers": "Financial market infrastructure",
+      "sante": "Healthcare (care providers, labs, critical medical devices/pharma)",
+      "eau_potable": "Drinking water",
+      "eaux_usees": "Waste water",
+      "infra_numerique": "Digital infrastructure (cloud, data centers, CDN, DNS, telecom)",
+      "gestion_tic": "ICT service management (B2B provider)",
+      "administration": "Public administration",
+      "espace": "Space",
+      "postal": "Postal and courier services",
+      "dechets": "Waste management",
+      "chimie": "Manufacture and distribution of chemicals",
+      "alimentaire": "Production, processing and distribution of food",
+      "fabrication": "Manufacturing (medical devices, electronics, machinery, vehicles)",
+      "fournisseur_numerique": "Digital provider (marketplace, search engine, social network)",
+      "recherche": "Research organization",
+      "autre": "None of these sectors"
+    }
+  },
+  "diagnosticResult": {
+    "title": "Your result",
+    "subtitle": "This is guidance based on your answers, not certified legal advice.",
+    "nis2Label": {
+      "essentielle": "Essential entity",
+      "importante": "Important entity",
+      "hors_champ": "Out of scope for NIS2"
+    },
+    "doraOut": "Out of scope for DORA",
+    "doraIn": "In scope for DORA",
+    "doraOutText": "You didn't indicate being a regulated financial entity: DORA doesn't apply.",
+    "doraInText": "As a regulated financial entity, DORA governs your ICT risk management.",
+    "unavailable": "Result unavailable.",
+    "overlapTitle": "Good to know",
+    "overlapText": "DORA takes precedence over NIS2 for regulated financial entities (lex specialis principle): DORA governs your ICT risk management, even though your sector also falls within NIS2's scope.",
+    "backToDashboard": "Back to dashboard",
+    "retakeDiagnostic": "Retake the diagnostic",
+    "reasons": {
+      "hors_ue": "You indicated you don't operate in the EU: NIS2 doesn't apply to your organization.",
+      "secteur_non_couvert": "Your industry isn't listed in Annexes I or II of the NIS2 directive.",
+      "trop_petit": "Your headcount and financials place you below the NIS2 threshold (under 50 employees and under €10M turnover/balance sheet), with no qualitative exception.",
+      "annexe2": "Your sector falls under Annex II of NIS2: you're classified as an important entity.",
+      "annexe1_grande": "Your sector falls under Annex I and your size exceeds the large-enterprise threshold (250 employees, or over €50M turnover and €43M balance sheet): you're classified as an essential entity.",
+      "annexe1_moyenne": "Your sector falls under Annex I and your size matches a medium-sized enterprise: you're classified as an important entity.",
+      "derogation_qualitative": "Although your size is below the usual threshold, a qualitative criterion (sole provider or critical impact) may bring you into NIS2's scope — confirm with a specialized lawyer."
+    }
+  },
+  "checklist": {
+    "notDoneTitle": "Take the diagnostic first",
+    "notDoneDesc": "The checklist is generated from your NIS2 result — take the diagnostic first to unlock it.",
+    "doDiagnostic": "Take the diagnostic",
+    "notNeededTitle": "No checklist needed",
+    "notNeededDesc": "Based on your diagnostic, you're out of scope for NIS2 — nothing to track here.",
+    "backToDashboard": "Back to dashboard",
+    "title": "NIS2 compliance checklist",
+    "progress": "{done} / {total} actions completed",
+    "status": {
+      "todo": "To do",
+      "in_progress": "In progress",
+      "done": "Done"
+    },
+    "priority": {
+      "haute": "high",
+      "moyenne": "medium",
+      "basse": "low"
+    }
+  },
+  "checklistCategories": {
+    "governance": "Governance",
+    "incident-management": "Incident management",
+    "business-continuity": "Business continuity",
+    "supply-chain": "Supply chain",
+    "system-security": "System security",
+    "evaluation": "Evaluation",
+    "awareness": "Awareness",
+    "encryption": "Encryption",
+    "access-control": "Access control",
+    "authentication": "Authentication"
+  },
+  "checklistItems": {
+    "designate-security-officer": { "title": "Appoint an information security officer", "description": "Name a person (internal or external) responsible for driving NIS2 compliance — a single point of contact for authorities and internally." },
+    "write-security-policy": { "title": "Write an information security policy", "description": "A document formalizing the security rules that apply to the organization (access, passwords, device use, etc.), approved by management." },
+    "risk-assessment": { "title": "Carry out a risk assessment", "description": "Identify critical systems, the main threats, and assess their potential impact on the business." },
+    "incident-response-procedure": { "title": "Set up an incident detection and response procedure", "description": "Define who does what in the event of a security incident: detection, triage, escalation, remediation." },
+    "notification-deadlines": { "title": "Know the mandatory notification deadlines", "description": "Early warning within 24h, notification within 72h, final report within 1 month to the competent authority in case of a significant incident." },
+    "incident-log": { "title": "Keep a log of security incidents", "description": "A dated history of incidents encountered, actions taken, and lessons learned — also serves as audit evidence." },
+    "backups": { "title": "Set up regular, tested backups", "description": "Automatic backups of critical data, stored separately from the main system, with restores tested periodically." },
+    "disaster-recovery-plan": { "title": "Write a disaster recovery plan (DRP)", "description": "A documented procedure to restore critical systems after a major incident (outage, ransomware, disaster)." },
+    "crisis-management-plan": { "title": "Define a crisis management plan", "description": "Who decides, who communicates, and with what backup means if the usual tools (email, phone) are unavailable." },
+    "supplier-inventory": { "title": "List critical vendors and suppliers", "description": "A list of third parties with access to your systems or data (host, software vendor, IT subcontractor)." },
+    "supplier-contract-clauses": { "title": "Include security requirements in supplier contracts", "description": "Minimum security clauses (incident notification, audit rights) in contracts with critical suppliers." },
+    "system-updates": { "title": "Keep systems and software up to date", "description": "A patching policy for security updates across workstations, servers, and software in use." },
+    "vulnerability-management": { "title": "Manage known vulnerabilities", "description": "A process to identify and fix security flaws in exposed systems (vulnerability scanning, security watch)." },
+    "security-audit": { "title": "Periodically audit the security measures in place", "description": "Regular (internal or external) review of how effective the implemented measures actually are." },
+    "security-awareness-training": { "title": "Train staff in cybersecurity best practices", "description": "Regular awareness training (phishing, passwords, use of company equipment) for all staff, not just IT." },
+    "it-hygiene-rules": { "title": "Define basic IT hygiene rules", "description": "Automatic workstation locking, no installing unauthorized software, management of admin rights." },
+    "encryption": { "title": "Encrypt sensitive data at rest and in transit", "description": "Encryption of disks, backups, and exchanges (HTTPS, VPN) containing critical or personal data." },
+    "least-privilege": { "title": "Apply the principle of least privilege", "description": "Each user only has access to the systems and data required for their role — access rights reviewed periodically." },
+    "asset-inventory": { "title": "Keep an inventory of devices and active accounts", "description": "An up-to-date list of workstations, servers, and user accounts, with systematic revocation when a staff member leaves." },
+    "offboarding-procedure": { "title": "Security procedure for departures and arrivals", "description": "Access disabled on an employee's last day, equipment returned, shared passwords changed." },
+    "mfa": { "title": "Enable multi-factor authentication (MFA)", "description": "MFA on all critical access: email, VPN, admin accounts, cloud tools." },
+    "emergency-communications": { "title": "Secure emergency communications", "description": "Have a backup communication channel (outside the usual email/phone) in case the main tools are compromised." }
+  },
+  "documents": {
+    "notDoneTitle": "Take the diagnostic first",
+    "notDoneDesc": "Documents are generated from your NIS2 result — take the diagnostic first to unlock them.",
+    "doDiagnostic": "Take the diagnostic",
+    "notNeededTitle": "No document needed",
+    "notNeededDesc": "Based on your diagnostic, you're out of scope for NIS2 — no compliance document to generate here.",
+    "backToDashboard": "Back to dashboard",
+    "title": "Compliance documents",
+    "subtitle": "Generate your documents from your organization's details and your NIS2 result. Review them before sharing — these are working drafts, not finalized documents.",
+    "generatedOn": "Generated on {date}",
+    "generate": "Generate",
+    "regenerate": "Regenerate",
+    "generating": "Generating…",
+    "download": "Download",
+    "preparing": "Preparing…",
+    "downloadError": "Couldn't create the download link.",
+    "generateError": "Couldn't generate the PDF. Try again in a moment.",
+    "uploadError": "Upload failed",
+    "saveError": "Couldn't save the document",
+    "packageTitle": "Full audit package",
+    "packageDesc": "One PDF combining the cover page, your checklist status, and the 3 documents above — handy for an audit or external sharing.",
+    "packageButton": "Download the audit package",
+    "types": {
+      "politique_securite": { "title": "Information security policy", "description": "General security framework for the organization." },
+      "registre_risques": { "title": "Risk register", "description": "Generic information security risks, with associated measures." },
+      "plan_gestion_incidents": { "title": "Incident response plan", "description": "Incident response procedure and NIS2 notification deadlines." }
+    }
+  },
+  "billing": {
+    "title": "Billing",
+    "currentPlan": "Current plan:",
+    "checkoutSuccess": "Subscription activated — thank you!",
+    "checkoutCancelled": "Payment cancelled, no changes were made.",
+    "manageSubscription": "Manage my subscription",
+    "currentPlanBadge": "Current plan",
+    "upgradeTo": "Upgrade to {plan}",
+    "planNames": { "free": "Free", "starter": "Starter", "pro": "Pro" },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "$149/month",
+        "features": ["1 organization", "Prioritized checklist", "5 key documents", "1 user"]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "$299/month",
+        "features": ["Multiple users", "Unlimited documents", "Full audit package", "Priority support"]
+      }
+    }
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  },
+  "email": {
+    "diagnosticFollowup": {
+      "subject": "Your NIS2 diagnostic result",
+      "heading": "Your NIS2Ready result",
+      "nis2InScope": "Based on your answers, {orgName} is classified as \"{classification}\" under the NIS2 directive.",
+      "nis2OutOfScope": "Based on your answers, NIS2 doesn't apply to your organization.",
+      "doraLine": "You're also in scope for DORA as a regulated financial entity.",
+      "nextSteps": "Next step: a prioritized checklist and compliance documents generated automatically from this result.",
+      "button": "View my dashboard",
+      "footer": "NIS2Ready — this result is guidance, not certified legal advice."
+    }
+  }
+}

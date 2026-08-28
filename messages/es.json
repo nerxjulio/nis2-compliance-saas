@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "title": "NIS2Ready — Cumplimiento NIS2 y DORA para pymes",
+    "description": "Descubre en 10 minutos si NIS2 o DORA te afecta, y obtén tu checklist priorizada y tus documentos de cumplimiento generados automáticamente."
+  },
+  "nav": {
+    "dashboard": "Panel",
+    "diagnostic": "Diagnóstico",
+    "checklist": "Checklist",
+    "documents": "Documentos",
+    "billing": "Facturación",
+    "logout": "Cerrar sesión",
+    "pricing": "Precios",
+    "login": "Iniciar sesión"
+  },
+  "landing": {
+    "badge": "NIS2 · DORA",
+    "heroTitle": "En 10 minutos, descubre si NIS2 o DORA te afecta",
+    "heroSubtitle": "Después, obtén automáticamente tu checklist priorizada y tus documentos de cumplimiento: política de seguridad, registro de riesgos, plan de respuesta a incidentes. Diseñado para directivos y CISO en solitario de pymes y medianas empresas, sin equipo de cumplimiento ni presupuesto de 10-15 mil € para una consultora.",
+    "ctaFree": "Hacer el diagnóstico gratuito",
+    "pricingTitle": "Precios simples, sin sorpresas",
+    "pricingSubtitle": "Empieza gratis, pasa a un plan de pago cuando estés listo para actuar.",
+    "mostChosen": "Más elegido",
+    "footer": "© {year} NIS2Ready",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": "0€",
+        "period": "",
+        "description": "Diagnóstico completo, para saber dónde estás.",
+        "features": ["Diagnóstico NIS2 y DORA", "Resultado inmediato", "Email de seguimiento"],
+        "cta": "Hacer el diagnóstico"
+      },
+      "starter": {
+        "name": "Starter",
+        "price": "149€",
+        "period": "/mes",
+        "description": "Para empezar tu cumplimiento normativo.",
+        "features": ["1 organización", "Checklist priorizada", "5 documentos clave generados", "Exportación PDF", "1 usuario"],
+        "cta": "Empezar"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "299€",
+        "period": "/mes",
+        "description": "Para gestionar el cumplimiento en equipo.",
+        "features": ["Multiusuario", "Documentos ilimitados", "Expediente de auditoría completo", "Historial de progreso", "Soporte prioritario"],
+        "cta": "Empezar"
+      }
+    }
+  },
+  "login": {
+    "title": "Iniciar sesión en NIS2Ready",
+    "description": "Introduce tu email profesional, te enviamos un enlace de acceso seguro — sin contraseña que recordar.",
+    "emailLabel": "Email profesional",
+    "placeholder": "tu@empresa.es",
+    "submit": "Enviarme el enlace de acceso",
+    "sending": "Enviando…",
+    "checkEmail": "Revisa tu bandeja de entrada: acabamos de enviarte un enlace de acceso.",
+    "invalidEmail": "Dirección de email no válida.",
+    "sendError": "No se pudo enviar el enlace de acceso. Inténtalo de nuevo en un momento."
+  },
+  "onboarding": {
+    "title": "Bienvenido a NIS2Ready",
+    "description": "Unos datos sobre tu organización para empezar el diagnóstico.",
+    "orgName": "Nombre de la organización",
+    "orgNamePlaceholder": "Acme S.L.",
+    "sector": "Sector de actividad",
+    "sectorPlaceholder": "Energía, salud, industria…",
+    "size": "Plantilla",
+    "sizePlaceholder": "Selecciona un rango",
+    "sizeOptions": {
+      "1-49": "1 a 49 empleados",
+      "50-249": "50 a 249 empleados",
+      "250-999": "250 a 999 empleados",
+      "1000+": "1000 empleados o más"
+    },
+    "submit": "Crear mi organización",
+    "creating": "Creando…",
+    "nameRequired": "El nombre de la organización es obligatorio.",
+    "createError": "No se pudo crear la organización. Inténtalo de nuevo en un momento."
+  },
+  "dashboard": {
+    "title": "Panel",
+    "subtitle": "Resumen de tu cumplimiento NIS2.",
+    "nis2Status": "Estado NIS2",
+    "diagnosticNotDone": "Diagnóstico no realizado",
+    "checklistProgress": "Progreso de la checklist",
+    "viewChecklist": "Ver la checklist",
+    "documentsGenerated": "Documentos generados",
+    "viewDocuments": "Ver los documentos",
+    "startDiagnosticTitle": "Empieza con el diagnóstico",
+    "startDiagnosticDesc": "10 minutos para saber con precisión si NIS2 te afecta, y en qué nivel.",
+    "doDiagnostic": "Hacer el diagnóstico",
+    "classification": {
+      "hors_champ": "Fuera de alcance",
+      "essentielle": "Entidad esencial",
+      "importante": "Entidad importante"
+    }
+  },
+  "diagnostic": {
+    "title": "Diagnóstico NIS2 y DORA",
+    "subtitle": "Unas preguntas para saber con precisión si te afecta, y en qué nivel.",
+    "resultButton": "Ver mi resultado",
+    "calculating": "Calculando…",
+    "sectorSectionTitle": "Tu sector de actividad",
+    "sectorSectionDesc": "NIS2 se aplica según una lista precisa de sectores (anexos I y II de la directiva).",
+    "sectorPlaceholder": "Selecciona tu sector",
+    "annexe1": "Anexo I — sectores de alta criticidad",
+    "annexe2": "Anexo II — otros sectores críticos",
+    "sizeSectionTitle": "Tamaño de tu organización",
+    "sizeSectionDesc": "El umbral de aplicación de NIS2 depende de la plantilla y de las cifras financieras — indica los datos más recientes que tengas.",
+    "employees": "Número de empleados",
+    "turnover": "Facturación anual (€)",
+    "balanceSheet": "Balance anual total (€)",
+    "euSectionTitle": "Operaciones en la UE",
+    "euSectionDesc": "NIS2 se aplica a entidades establecidas en la UE o que prestan servicios en ella.",
+    "yes": "Sí",
+    "no": "No",
+    "criteriaSectionTitle": "Criterios particulares",
+    "criteriaSectionDesc": "Marca lo que se aplique a tu organización.",
+    "soleProvider": "Eres el único proveedor de este servicio en tu país.",
+    "criticalImpact": "Una interrupción de tu actividad tendría un impacto significativo en la seguridad pública o la salud pública.",
+    "financialEntity": "Eres una entidad financiera regulada (banco, seguros, pagos, gestión de activos, criptoactivos…) — relevante para DORA.",
+    "sectorRequired": "Selecciona un sector de actividad.",
+    "saveError": "No se pudieron guardar tus respuestas. Inténtalo de nuevo en un momento.",
+    "computeError": "No se pudo calcular el resultado. Inténtalo de nuevo en un momento.",
+    "sectors": {
+      "energie": "Energía (electricidad, gas, petróleo, calefacción urbana, hidrógeno)",
+      "transport": "Transporte (aéreo, ferroviario, marítimo, por carretera)",
+      "banque": "Sector bancario",
+      "marches_financiers": "Infraestructuras de mercados financieros",
+      "sante": "Sanidad (atención sanitaria, laboratorios, dispositivos médicos/farma críticos)",
+      "eau_potable": "Agua potable",
+      "eaux_usees": "Aguas residuales",
+      "infra_numerique": "Infraestructura digital (cloud, centros de datos, CDN, DNS, telecomunicaciones)",
+      "gestion_tic": "Gestión de servicios TIC (proveedor B2B)",
+      "administration": "Administración pública",
+      "espace": "Espacio",
+      "postal": "Servicios postales y de mensajería",
+      "dechets": "Gestión de residuos",
+      "chimie": "Fabricación y distribución de productos químicos",
+      "alimentaire": "Producción, transformación y distribución de alimentos",
+      "fabrication": "Fabricación (dispositivos médicos, electrónica, maquinaria, vehículos)",
+      "fournisseur_numerique": "Proveedor digital (marketplace, buscador, red social)",
+      "recherche": "Organismo de investigación",
+      "autre": "Ninguno de estos sectores"
+    }
+  },
+  "diagnosticResult": {
+    "title": "Tu resultado",
+    "subtitle": "Esto es una orientación basada en tus respuestas, no un asesoramiento legal certificado.",
+    "nis2Label": {
+      "essentielle": "Entidad esencial",
+      "importante": "Entidad importante",
+      "hors_champ": "Fuera de alcance de NIS2"
+    },
+    "doraOut": "Fuera de alcance de DORA",
+    "doraIn": "En alcance de DORA",
+    "doraOutText": "No indicaste ser una entidad financiera regulada: DORA no se aplica.",
+    "doraInText": "Como entidad financiera regulada, DORA rige tu gestión de riesgos TIC.",
+    "unavailable": "Resultado no disponible.",
+    "overlapTitle": "Ten en cuenta",
+    "overlapText": "DORA tiene prioridad sobre NIS2 para las entidades financieras reguladas (principio de lex specialis): es DORA quien rige tu gestión de riesgos TIC, aunque tu sector también entre en el ámbito de NIS2.",
+    "backToDashboard": "Volver al panel",
+    "retakeDiagnostic": "Repetir el diagnóstico",
+    "reasons": {
+      "hors_ue": "Indicaste que no operas en la UE: NIS2 no se aplica a tu organización.",
+      "secteur_non_couvert": "Tu sector de actividad no figura en los anexos I o II de la directiva NIS2.",
+      "trop_petit": "Tu plantilla y tus cifras financieras te sitúan por debajo del umbral de aplicación de NIS2 (menos de 50 empleados y menos de 10M€ de facturación/balance), sin criterio de excepción cualitativo.",
+      "annexe2": "Tu sector corresponde al anexo II de NIS2: se te clasifica como entidad importante.",
+      "annexe1_grande": "Tu sector corresponde al anexo I y tu tamaño supera el umbral de gran empresa (250 empleados, o más de 50M€ de facturación y 43M€ de balance): se te clasifica como entidad esencial.",
+      "annexe1_moyenne": "Tu sector corresponde al anexo I y tu tamaño corresponde a una mediana empresa: se te clasifica como entidad importante.",
+      "derogation_qualitative": "Aunque tu tamaño esté por debajo del umbral habitual, un criterio cualitativo (proveedor único o impacto crítico) puede situarte dentro del alcance de NIS2 — confírmalo con un abogado especializado."
+    }
+  },
+  "checklist": {
+    "notDoneTitle": "Haz primero el diagnóstico",
+    "notDoneDesc": "La checklist se genera a partir de tu resultado NIS2 — haz primero el diagnóstico para desbloquearla.",
+    "doDiagnostic": "Hacer el diagnóstico",
+    "notNeededTitle": "No se necesita checklist",
+    "notNeededDesc": "Según tu diagnóstico, no estás dentro del ámbito de aplicación de NIS2 — no hay ninguna obligación que seguir aquí.",
+    "backToDashboard": "Volver al panel",
+    "title": "Checklist de cumplimiento NIS2",
+    "progress": "{done} / {total} acciones completadas.",
+    "status": {
+      "todo": "Pendiente",
+      "in_progress": "En curso",
+      "done": "Hecho"
+    },
+    "priority": {
+      "haute": "alta",
+      "moyenne": "media",
+      "basse": "baja"
+    }
+  },
+  "checklistCategories": {
+    "governance": "Gobernanza",
+    "incident-management": "Gestión de incidentes",
+    "business-continuity": "Continuidad de negocio",
+    "supply-chain": "Cadena de suministro",
+    "system-security": "Seguridad de los sistemas",
+    "evaluation": "Evaluación",
+    "awareness": "Concienciación",
+    "encryption": "Cifrado",
+    "access-control": "Control de acceso",
+    "authentication": "Autenticación"
+  },
+  "checklistItems": {
+    "designate-security-officer": { "title": "Designar un responsable de seguridad de la información", "description": "Nombra a una persona (interna o externa) responsable de impulsar el cumplimiento de NIS2 — un único punto de contacto para las autoridades y a nivel interno." },
+    "write-security-policy": { "title": "Redactar una política de seguridad de la información", "description": "Documento que formaliza las normas de seguridad aplicables a la organización (accesos, contraseñas, uso de equipos, etc.), aprobado por la dirección." },
+    "risk-assessment": { "title": "Realizar un análisis de riesgos", "description": "Identificar los sistemas críticos, las principales amenazas y evaluar su impacto potencial en la actividad." },
+    "incident-response-procedure": { "title": "Establecer un procedimiento de detección y respuesta a incidentes", "description": "Definir quién hace qué ante un incidente de seguridad: detección, clasificación, escalado, remediación." },
+    "notification-deadlines": { "title": "Conocer los plazos de notificación obligatorios", "description": "Alerta temprana en 24h, notificación en 72h, informe final en 1 mes ante la autoridad competente en caso de incidente significativo." },
+    "incident-log": { "title": "Mantener un registro de incidentes de seguridad", "description": "Historial fechado de los incidentes ocurridos, medidas tomadas y lecciones aprendidas — también sirve como evidencia de auditoría." },
+    "backups": { "title": "Implantar copias de seguridad periódicas y probadas", "description": "Copias de seguridad automáticas de los datos críticos, almacenadas separadas del sistema principal, con restauraciones probadas periódicamente." },
+    "disaster-recovery-plan": { "title": "Redactar un plan de recuperación ante desastres (DRP)", "description": "Procedimiento documentado para restablecer los sistemas críticos tras un incidente grave (avería, ransomware, siniestro)." },
+    "crisis-management-plan": { "title": "Definir un plan de gestión de crisis", "description": "Quién decide, quién comunica, y con qué medios de respaldo si las herramientas habituales (email, teléfono) no están disponibles." },
+    "supplier-inventory": { "title": "Inventariar los proveedores críticos", "description": "Lista de terceros con acceso a tus sistemas o datos (hosting, proveedor de software, subcontratista de TI)." },
+    "supplier-contract-clauses": { "title": "Incluir requisitos de seguridad en los contratos con proveedores", "description": "Cláusulas mínimas de seguridad (notificación de incidentes, derecho de auditoría) en los contratos con proveedores críticos." },
+    "system-updates": { "title": "Mantener los sistemas y el software actualizados", "description": "Política de actualización y parches de seguridad en equipos, servidores y software utilizados." },
+    "vulnerability-management": { "title": "Gestionar las vulnerabilidades conocidas", "description": "Proceso para identificar y corregir fallos de seguridad en los sistemas expuestos (escaneo de vulnerabilidades, vigilancia de seguridad)." },
+    "security-audit": { "title": "Auditar periódicamente las medidas de seguridad implantadas", "description": "Revisión periódica (interna o externa) de la eficacia real de las medidas aplicadas." },
+    "security-awareness-training": { "title": "Formar a los equipos en buenas prácticas de ciberseguridad", "description": "Concienciación periódica (phishing, contraseñas, uso de equipos corporativos) para todo el personal, no solo TI." },
+    "it-hygiene-rules": { "title": "Definir reglas básicas de higiene informática", "description": "Bloqueo automático de equipos, prohibición de instalar software no autorizado, gestión de permisos de administrador." },
+    "encryption": { "title": "Cifrar los datos sensibles en reposo y en tránsito", "description": "Cifrado de discos, copias de seguridad e intercambios (HTTPS, VPN) que contengan datos críticos o personales." },
+    "least-privilege": { "title": "Aplicar el principio de mínimo privilegio", "description": "Cada usuario solo tiene acceso a los sistemas y datos necesarios para su función — revisión periódica de permisos." },
+    "asset-inventory": { "title": "Mantener un inventario de equipos y cuentas activas", "description": "Lista actualizada de equipos, servidores y cuentas de usuario, con revocación sistemática cuando un empleado se marcha." },
+    "offboarding-procedure": { "title": "Procedimiento de seguridad para altas y bajas", "description": "Desactivación de accesos desde el último día de un empleado, devolución de equipos, cambio de contraseñas compartidas." },
+    "mfa": { "title": "Activar la autenticación multifactor (MFA)", "description": "MFA en todos los accesos críticos: correo, VPN, cuentas de administrador, herramientas cloud." },
+    "emergency-communications": { "title": "Asegurar las comunicaciones de emergencia", "description": "Prever un medio de comunicación de respaldo (fuera del correo/teléfono habituales) en caso de compromiso de las herramientas principales." }
+  },
+  "documents": {
+    "notDoneTitle": "Haz primero el diagnóstico",
+    "notDoneDesc": "Los documentos se generan a partir de tu resultado NIS2 — haz primero el diagnóstico para desbloquearlos.",
+    "doDiagnostic": "Hacer el diagnóstico",
+    "notNeededTitle": "No se necesita ningún documento",
+    "notNeededDesc": "Según tu diagnóstico, no estás dentro del ámbito de aplicación de NIS2 — no hay ningún documento de cumplimiento que generar aquí.",
+    "backToDashboard": "Volver al panel",
+    "title": "Documentos de cumplimiento",
+    "subtitle": "Genera tus documentos a partir de los datos de tu organización y de tu resultado NIS2. Revísalos antes de compartirlos — son borradores de trabajo, no documentos finales.",
+    "generatedOn": "Generado el {date}",
+    "generate": "Generar",
+    "regenerate": "Regenerar",
+    "generating": "Generando…",
+    "download": "Descargar",
+    "preparing": "Preparando…",
+    "downloadError": "No se pudo generar el enlace de descarga.",
+    "generateError": "No se pudo generar el PDF. Inténtalo de nuevo en un momento.",
+    "uploadError": "Error al subir el archivo",
+    "saveError": "No se pudo guardar el documento",
+    "packageTitle": "Expediente de auditoría completo",
+    "packageDesc": "Un solo PDF que combina la portada, el estado de tu checklist y los 3 documentos anteriores — práctico para una auditoría o para compartir externamente.",
+    "packageButton": "Descargar el expediente de auditoría",
+    "types": {
+      "politique_securite": { "title": "Política de seguridad de la información", "description": "Marco general de seguridad aplicable a la organización." },
+      "registre_risques": { "title": "Registro de riesgos", "description": "Riesgos genéricos de seguridad de la información, con medidas asociadas." },
+      "plan_gestion_incidents": { "title": "Plan de respuesta a incidentes", "description": "Procedimiento de respuesta a incidentes y plazos de notificación NIS2." }
+    }
+  },
+  "billing": {
+    "title": "Facturación",
+    "currentPlan": "Plan actual:",
+    "checkoutSuccess": "Suscripción activada — ¡gracias!",
+    "checkoutCancelled": "Pago cancelado, no se ha realizado ningún cambio.",
+    "manageSubscription": "Gestionar mi suscripción",
+    "currentPlanBadge": "Plan actual",
+    "upgradeTo": "Pasar a {plan}",
+    "planNames": { "free": "Free", "starter": "Starter", "pro": "Pro" },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "149€/mes",
+        "features": ["1 organización", "Checklist priorizada", "5 documentos clave", "1 usuario"]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "299€/mes",
+        "features": ["Multiusuario", "Documentos ilimitados", "Expediente de auditoría completo", "Soporte prioritario"]
+      }
+    }
+  },
+  "languageSwitcher": {
+    "label": "Idioma"
+  },
+  "email": {
+    "diagnosticFollowup": {
+      "subject": "Tu resultado del diagnóstico NIS2",
+      "heading": "Tu resultado de NIS2Ready",
+      "nis2InScope": "Según tus respuestas, {orgName} está clasificada como «{classification}» conforme a la directiva NIS2.",
+      "nis2OutOfScope": "Según tus respuestas, NIS2 no se aplica a tu organización.",
+      "doraLine": "También estás dentro del alcance de DORA como entidad financiera regulada.",
+      "nextSteps": "Siguiente paso: una checklist priorizada y documentos de cumplimiento generados automáticamente a partir de este resultado.",
+      "button": "Ver mi panel",
+      "footer": "NIS2Ready — este resultado es una orientación, no un asesoramiento legal certificado."
+    }
+  }
+}

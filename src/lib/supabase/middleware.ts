@@ -1,11 +1,13 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { routing } from "@/i18n/routing";
 
-const PROTECTED_PREFIXES = ["/dashboard"];
+const PUBLIC_PATHS = new Set(["/", "/login"]);
 
-export async function updateSession(request: NextRequest) {
-  let supabaseResponse = NextResponse.next({ request });
-
+// `response` vient du middleware next-intl (rewrite/redirect pour la locale, ou next()) —
+// on ne le remplace jamais par un NextResponse.next() vierge, seulement des cookies dessus,
+// sinon on perdrait la résolution de locale déjà effectuée.
+export async function updateSession(request: NextRequest, response: NextResponse) {
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -16,9 +18,8 @@ export async function updateSession(request: NextRequest) {
         },
         setAll(cookiesToSet) {
           cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
-          supabaseResponse = NextResponse.next({ request });
           cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
+            response.cookies.set(name, value, options)
           );
         },
       },
@@ -31,16 +32,21 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const isProtected = PROTECTED_PREFIXES.some((prefix) =>
-    request.nextUrl.pathname.startsWith(prefix)
-  );
+  const segments = request.nextUrl.pathname.split("/").filter(Boolean);
+  const maybeLocale = segments[0];
+  const isLocalePrefixed = (routing.locales as readonly string[]).includes(maybeLocale);
+  const pathWithoutLocale = isLocalePrefixed ? "/" + segments.slice(1).join("/") : request.nextUrl.pathname;
+  const normalizedPath = pathWithoutLocale === "" ? "/" : pathWithoutLocale;
 
-  if (isProtected && !user) {
+  if (!PUBLIC_PATHS.has(normalizedPath) && !user) {
+    const locale = isLocalePrefixed ? maybeLocale : routing.defaultLocale;
     const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = "/login";
-    redirectUrl.searchParams.set("redirect", request.nextUrl.pathname);
-    return NextResponse.redirect(redirectUrl);
+    redirectUrl.pathname = `/${locale}/login`;
+    redirectUrl.searchParams.set("redirect", normalizedPath);
+    const redirectResponse = NextResponse.redirect(redirectUrl);
+    response.cookies.getAll().forEach((c) => redirectResponse.cookies.set(c));
+    return redirectResponse;
   }
 
-  return supabaseResponse;
+  return response;
 }
