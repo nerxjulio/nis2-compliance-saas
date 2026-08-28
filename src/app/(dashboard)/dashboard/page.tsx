@@ -95,6 +95,11 @@ export default async function DashboardPage() {
             <CardDescription>Documents générés</CardDescription>
             <CardTitle className="text-xl">{docCount ?? 0}</CardTitle>
           </CardHeader>
+          <CardContent>
+            <Link href="/documents" className="text-sm text-primary hover:underline">
+              Voir les documents
+            </Link>
+          </CardContent>
         </Card>
       </div>
 

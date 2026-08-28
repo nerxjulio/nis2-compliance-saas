@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: "/dashboard", label: "Tableau de bord" },
   { href: "/diagnostic", label: "Diagnostic" },
   { href: "/checklist", label: "Checklist" },
+  { href: "/documents", label: "Documents" },
 ];
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
