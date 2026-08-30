@@ -5,6 +5,15 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 
+// Vercel injecte "access-control-allow-origin: *" par défaut sur les pages statiques/
+// ISR, au niveau plateforme — ça ne vient pas de ce code (vérifié : aucun header CORS
+// n'était défini nulle part avant), et ça ne peut donc pas être "retiré", seulement
+// écrasé explicitement. VERCEL_PROJECT_PRODUCTION_URL est fourni automatiquement par
+// Vercel au build (le domaine de prod stable, pas l'URL de déploiement avec son hash).
+const siteOrigin = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000");
+
 // Pas de nonce/rendu dynamique forcé partout (voir le guide CSP de Next) : ce projet a
 // des pages statiques/ISR qu'on ne veut pas casser. 'unsafe-inline' sur les scripts est
 // un compromis pragmatique — nettement mieux que l'absence totale de CSP, sans changer
@@ -33,6 +42,7 @@ const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+  { key: "Access-Control-Allow-Origin", value: siteOrigin },
 ];
 
 const nextConfig: NextConfig = {
