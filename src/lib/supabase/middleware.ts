@@ -23,6 +23,7 @@ export async function updateSession(request: NextRequest, response: NextResponse
           );
         },
       },
+      cookieOptions: { secure: process.env.NODE_ENV === "production" },
     }
   );
 
