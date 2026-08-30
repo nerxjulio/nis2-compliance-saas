@@ -36,6 +36,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Retire "X-Powered-By: Next.js" — révèle sinon la stack exacte sans aucune raison.
+  poweredByHeader: false,
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },
